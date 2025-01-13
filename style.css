@@ -3,6 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* outline: 1px solid red; */
 }
 
 .d-inlineBlock {
@@ -26,6 +27,49 @@
     font-family: pop-italic;
     src: url(./fonts/Poppins-Italic.ttf);
 }
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+@keyframes buttonAnim {
+    from {
+        background-image: linear-gradient(to right, #9808fe, #8500b9);
+    }
+
+    to {
+        background-image: linear-gradient(to right, #590b91, #a60fe2);
+    }
+}
+
+/* scrollbar style  */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #9313f1;
+    border-radius: 20px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #630ca1;
+  }
 
 /* HEADER STYLE  */
 .header-container {
@@ -140,10 +184,89 @@
     display: none;
 }
 
+
+/* home content styling */
+.homeContentContainer {
+    width: 100%;
+    height: 90vh;
+    justify-content: space-around;
+    align-items: center;
+    animation: appear 1.5s linear;
+}
+
+.homeContentText {
+    font-size: 5rem;
+    font-family: bpg;
+}
+
+.web {
+    color: #9313f1;
+}
+
+.pages {
+    color: #1e1e40;
+}
+
+.development {
+    color: #6454ff;
+}
+
+.homeContentMockup img {
+    cursor: unset;
+}
+
+.homeContentContainer img {
+    width: 100%;
+}
+
+.homeContentText button {
+    width: 25rem;
+    height: 3rem;
+    background-image: linear-gradient(to right, #8806e6, #620188);
+    border: none;
+    border-radius: 1rem;
+    color: white;
+    font-family: bpg;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+    animation: buttonAnim 4s linear 0s 100;
+    animation-fill-mode: both;
+}
+
+.homeContentText button a {
+    color: white;
+    text-decoration: none;
+}
+
+/* scrollup styling --------------------------------------------------------------------------------------------------------------------- */
+.scrollUp {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 30px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 15px;
+}
+
+
+/* services content  */
+#services {
+    width: 100%;
+    height: 100vh;
+}
+
 /* -----------------------------------------[ RESPONSIVE MOBILE]----------------------------------------- */
 @media only screen and (max-width: 600px) {
     .header-navigation {
         display: none;
+    }
+
+    .header-navigation {
+        position: fixed;
     }
 
     .contactMe {
@@ -176,9 +299,11 @@
         display: none; /* use flex */
         justify-content: center;
         align-items: center;
-        width: 100%;
+        /* width: 100%; */
         height: 80vh;
         flex-direction: column;
+        overflow-x: hidden;
+        animation: appear 0.5s linear;
     }
 
     .burgerMenuNavigation ul li {
@@ -222,4 +347,29 @@
         width: 20px;
         margin-left: 0.5rem;
     }
+
+    /* home content responsive */
+    .homeContentMockup {
+        display: block;
+    }
+
+    .homeContentText p {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    .homeContentText button {
+        width: 20rem;
+        height: 3rem;
+    }
+
+    .homeContentContainer {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .homeContentContainer img {
+        width: 100%;
+    }
+
 }

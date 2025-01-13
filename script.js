@@ -21,4 +21,27 @@ closeMenuIcon.addEventListener("click", function() {
 })
 
 
+// scrollup function 
+const scrollUp = document.querySelector(".scrollUp")
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+    if (document.documentElement.scrollTop > 700) {
+        scrollUp.style.display = "block";
+    } else {
+        scrollUp.style.display = "none";
+    }
+  }
+  
+  function topFunction() {
+    document.documentElement.scrollTop = 0;
+}
+
+scrollUp.addEventListener("click", function() {
+    document.documentElement.scrollTop = 0;
+})
+
+
+
 
