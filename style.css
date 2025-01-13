@@ -1,0 +1,220 @@
+/* GENERAL  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.d-inlineBlock {
+    display: inline-block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+@font-face {
+    font-family: bpg;
+    src: url(./fonts/bpg_nino_mtavruli_bold.ttf);
+}
+
+@font-face {
+    font-family: pop-italic;
+    src: url(./fonts/Poppins-Italic.ttf);
+}
+
+/* HEADER STYLE  */
+.header-container {
+    justify-content:center;
+    align-items: center;
+}
+
+.header-container {
+    width: 100%;
+    height: 6rem;
+    border-bottom: 1px solid #f0ecec;
+    color: #8e20f3;
+}
+
+.header-navigation ul {
+    list-style-type: none;
+}
+
+.header-navigation ul li {
+    float: left;
+}
+
+.header-navigation ul li a {
+    text-decoration: none;
+    margin-right: 25px;
+    font-family: bpg;
+    color: black;
+}
+
+.header-navigation ul li a:hover {
+    color: #771ace;
+    border-bottom: 1px solid #9808fe;
+    border-width: 2px;
+    border-spacing: 4px;
+}
+
+.header-logo img {
+    width: 50%;
+}
+
+.contactMeButton {
+    width: 8.5rem;
+    height: 2.5rem;
+    border-radius: 1rem;
+    margin-right: 1.5rem;
+    border: none;
+    /* background-color: #8e20f3; */
+    background-image: linear-gradient(to right, #9808fe, #8500b9);
+    color: white;
+    font-family: pop-italic;
+    cursor: pointer;
+}
+
+.contactMeButton:hover {
+    background-image: linear-gradient(to right, #8806e6, #620188);
+    transition: background-image 0.7s ease;
+}
+
+.changeLanguageDropdown {
+    border-radius: 1rem;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    /* background-image: linear-gradient(to right, #9808fe, #8500b9); */
+    color: white;
+    font-family: pop-italic;
+    font-size: 0.8rem;
+}
+
+.changeLanguageDropdown img {
+    width: 20px;
+}
+
+.changeLanguageContent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    position: absolute;
+    overflow: hidden;
+    transition: background-color 0.7s ease;
+    color: black;
+}
+
+.changeLanguageDropdown:hover .changeLanguageContent {
+    display: block;
+}
+
+.burgerMenu {
+    display: none;
+}
+
+.burgerMenuContainer {
+    display: none;
+}
+
+.closeIconMenu {
+    display: none;
+}
+
+.burgerMenuNavigation {
+    display: none;
+}
+
+.burgerChangeLanguage {
+    display: none;
+}
+
+.burgerContactMe {
+    display: none;
+}
+
+/* -----------------------------------------[ RESPONSIVE MOBILE]----------------------------------------- */
+@media only screen and (max-width: 600px) {
+    .header-navigation {
+        display: none;
+    }
+
+    .contactMe {
+        display: none;
+    }
+
+    .changeLanguageDropdown {
+        display: none;
+    }
+
+    .header-container {
+        justify-content:space-around;
+        align-items: center;    
+    }
+
+    .burgerMenu {
+        display: block;
+    }
+
+    .burgerMenu img {
+        width: 3rem;
+        cursor: pointer;
+    }
+
+    .closeIconMenu {
+        display: none;
+    }
+
+    .burgerMenuContainer {
+        display: none; /* use flex */
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 80vh;
+        flex-direction: column;
+    }
+
+    .burgerMenuNavigation ul li {
+        list-style: none;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .burgerMenuNavigation ul li a {
+        font-family: bpg;
+        text-align: center;
+        text-decoration: none;
+        color: #8e20f3;
+    }
+
+    .burgerMenuNavigation ul li a:hover {
+        color: #771ace;
+        border-bottom: 1px solid #9808fe;
+        border-width: 2px;
+        border-spacing: 4px;
+    }
+
+    .burgerContactMe {
+        width: 8.5rem;
+        height: 2.5rem;
+        border-radius: 1rem;
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        border: none;
+        background-image: linear-gradient(to right, #9808fe, #8500b9);
+        color: white;
+        font-family: pop-italic;
+        cursor: pointer;
+    }
+
+    .burgerChangeLanguage img {
+        width: 20px;
+    }
+}
