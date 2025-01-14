@@ -1,0 +1,29 @@
+[
+    {
+      "imgUrl": "urlyleoba",
+      "name": "Crystalbet",
+      "description": "ონლაინ ტოტალიზატორი",
+      "author": "Nika Mestvirishvili",
+      "webUrl": "crystalbet.ge",
+      "usedLanguages": "xz",
+      "id": 1
+    },
+
+    {
+        "imgUrl": "urlyleoba",
+        "name": "Smart Academy",
+        "description": "სმარტ აკადემია",
+        "author": "Nika Mestvirishvili",
+        "usedLanguages": "xz",
+        "id": 2
+    },
+
+    {
+        "imgUrl": "urlyleoba",
+        "name": "MBC.GE",
+        "description": "ტექნიკის მაღაზია",
+        "author": "Nika Mestvirishvili",
+        "usedLanguages": "xz",
+        "id": 3
+    }
+]
