@@ -322,7 +322,7 @@
     width: 100%;
     height: 100vh;
     border-top: 0.8px solid #d9d9d9;
-    animation: appear linear;
+    /* animation: appear linear; */
     animation-timeline: view();
     animation-range: entry 0;
 }
@@ -513,6 +513,7 @@
     /* service section respo  */
     #services {
         height: 210vh;
+        border-bottom: 1px solid red;
     }
     .servicesCard {
         width: 100%;
@@ -530,7 +531,7 @@
 
     .projectCardsContainer {
         width: 100%;
-        height: 240vh;
+        height: 140vh;
         justify-content: center;
         align-items: center;
         flex-direction: column;
