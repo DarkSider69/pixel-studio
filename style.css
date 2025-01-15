@@ -395,6 +395,8 @@
     text-decoration: none;
     color: black;
 }
+
+
 /* -----------------------------------------[ RESPONSIVE MOBILE]----------------------------------------- */
 @media only screen and (max-width: 600px) {
     .header-navigation {
@@ -509,11 +511,9 @@
     }
 
     /* service section respo  */
-    #projects {
-        width: 100%;
-        height: 500vh;
+    #services {
+        height: 210vh;
     }
-
     .servicesCard {
         width: 100%;
         height: 90vh;
@@ -523,10 +523,70 @@
     }
 
     /* projects respo */
-    .projectCardsContainer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
+    #projects {
+        width: 100%;
+        height: 150vh;
     }
 
+    .projectCardsContainer {
+        width: 100%;
+        height: 150vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 8rem;
+    }
+
+    .projectCards {
+        width: 100%;
+        /* height: 25rem; */
+    }
+
+    .projectCards img {
+        width: 25rem;
+        border-radius: 0.4rem;
+    }
+    
+    .projectCards p {
+        font-family: bpg;
+        font-size: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .projectCardsDesc {
+        color: #620188;
+    }
+    
+    .projectCards a {
+        margin-top: 1.5rem;
+    }
+    
+    .projectCardsHover {
+        display: none;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(0, 0, 0, 0.281);
+        position: absolute;
+        width: 35rem;
+        height: 25rem;
+        border-radius: 0.5rem;
+    }
+    
+    .projectCards:hover .projectCardsHover {
+        display: none;
+        cursor: pointer;
+    }
+    
+    .projectCardsHover img {
+        width: 5rem;
+    }
+    
+    #projects a {
+        text-decoration: none;
+    }
+    
+    .projectCardsTitle {
+        text-decoration: none;
+        color: black;
+    }
 }
